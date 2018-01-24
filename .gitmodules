@@ -1,0 +1,3 @@
+[submodule "themes/react"]
+	path = themes/react
+	url = https://github.com/NoahDragon/hexo-theme-react.git
