@@ -1,0 +1,36 @@
+// Post modal
+mixin content(post, author, anchor, background, isPost)
+    div(id=`${anchor}`).modal.bottom-sheet
+        .modal-close.absolute &times;
+        .modal-cover
+            .rectangle-50(style='background-image: url(' + `${background}` + ')')
+        .modal-content
+            .row
+                .col.s12.l8.offset-l2
+                    h4= `${post.title}`
+
+                    if isPost
+                        p.flow-text.grey-text.
+                            Author: #{author}<br>
+                            Date: #{post.date}
+                    else
+                        p.flow-text.grey-text.
+                            Client: #{post.client}<br>
+                            Category: #{post.cate}<br>
+                            Task: #{post.task}
+
+                    .divider
+
+                    section !{post.content}
+
+                    .divider
+
+            .row
+                .col.s12.center
+                    p.flow-text Share this
+                    p.flow-text.social
+                        a.facebook(href='#!') facebook
+                        a.googleplus(href='#!') google+
+                        a.vk(href='#!') vk
+                        a.twitter(href='#!') twitter
+                        a.pinterest(href='#!') pinterest

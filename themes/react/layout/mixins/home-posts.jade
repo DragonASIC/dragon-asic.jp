@@ -1,0 +1,34 @@
+include modal-content
+
+mixin top5posts
+        - var ps = site.posts.toArray().sort(function(a,b){return a.date < b.date})
+        - var author, anchor, featured, background
+        - var i = 0
+        each post in ps
+            if post.section != 'blog'
+                - continue
+            if i == 5
+                - break
+            - author = post.author || config.author
+            - anchor = 'post' + i
+            - featured = post.featured || theme.featured
+            - background = post.background || theme.background
+            if i < 2
+                a.col.s12.l6.padding-bottom.modal-trigger(href='#' + `${anchor}`)
+                    .rectangle(style='background-image: url(' + `${featured}` +')')
+                      .content.valign-wrapper.center
+                          div= `${post.title}`
+                              small
+                                  time(datetime=`${post.date}`) #{post.date.format("YYYY-MM-DD")} 
+                                  | &nbsp;by #{author}
+            else
+                a.col.s12.l4.padding-bottom.modal-trigger(href='#' + `${anchor}`)
+                    .square(style='background-image: url(' + `${featured}` +')')
+                      .content.valign-wrapper.center
+                          .smaller= `${post.title}`
+                              small
+                                  time(datetime=`${post.date}`) #{post.date.format("YYYY-MM-DD")} 
+                                  | &nbsp;by #{author}
+            
+            +content(post, author, anchor, background, 1)
+            - i++

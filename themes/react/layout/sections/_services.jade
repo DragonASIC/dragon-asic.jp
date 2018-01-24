@@ -1,0 +1,9 @@
+include ../mixins/services.jade
+
+section#services.services.scrollspy
+    .container
+        h2: span Services
+        h3 What we offer
+        .row.big-icons-row.service-items.center
+            each service in site.data['services']
+                +service(service)

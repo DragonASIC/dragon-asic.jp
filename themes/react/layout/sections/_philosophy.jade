@@ -1,0 +1,14 @@
+include ../mixins/philosophy
+
+section#philosophy.about.scrollspy
+    .container
+        h3.margin-top Our philosophy
+        .row.philosophy.big-icons-row.grey.lighten-4
+            .col.s12
+                ul.tabs
+                    each tab, i in site.data['philosophy']
+                        +tab(tab, i)
+
+            .tab-contents
+                each tab, i in site.data['philosophy']
+                    +content(tab, i)

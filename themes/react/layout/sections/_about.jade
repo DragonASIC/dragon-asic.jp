@@ -1,0 +1,23 @@
+include ../mixins/about
+
+section#about.about.scrollspy
+    .container
+        h2: span About us
+        h3 Meet the superheroes
+        .row
+            // About general photo
+            +general-photo
+
+            // About carousel
+            .owl-carousel.owl-theme.col.s12.l6
+                each star, i in site.data['stars']
+                    +star(star, i)
+                .col.s12
+                    .rectangle.grey.lighten-3
+                        .content.valign-wrapper.you
+                            .name You?
+                                br
+                                a(href='mailto:job@react?subject=Job%20Application') Apply now
+
+            each star, i in site.data['stars']
+                +detail(star, i)

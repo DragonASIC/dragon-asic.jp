@@ -1,0 +1,11 @@
+include ../mixins/faqs.jade
+
+section#faqs.faqs.scrollspy
+    .container
+        h2: span FAQs
+        h3 Frequently asked questions
+        .row
+            .col.s12
+                ul.collapsible(data-collapsible='accordion')
+                    each faq in site.data['faqs']
+                        +faq(faq)
