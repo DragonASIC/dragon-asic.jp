@@ -28,7 +28,8 @@ $ring-color-2: transparentize(color('deep-purple', 'accent-3'), .3);
     .hero {
         position: relative;
         overflow: hidden;
-        background-color: color('light-blue', 'lighten-3');
+        background-image: url(https://upload.wikimedia.org/wikipedia/commons/f/f9/ClearFog-base.jpg);
+        background-size: cover;
 
         h1 {
             position: relative;

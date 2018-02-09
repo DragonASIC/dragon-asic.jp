@@ -3,29 +3,14 @@
 #    2. Open link in a new tab, please put the full url in the external-link field.
 # To hide a menu, leave the display-name blank.
 menu:
-  projects:
-    display-name: Projects
-    external-link:
-  services:
-    display-name: Services
-    external-link:
-  prices:
-    display-name:
-    external-link:
-  blog:
-    display-name: Blog
-    external-link:
   about:
-    display-name: About
+    display-name: Members
     external-link:
   philosophy:
-    display-name: Philosophy
+    display-name: hoge
     external-link:
   contact:
-    display-name:
-    external-link:
-  faqs:
-    display-name: FAQs
+    display-name: Abount Us
     external-link:
   
 # show the subscribe area
