@@ -3,8 +3,8 @@ mixin general-photo
         .rectangle(style='background-image: url(' + `${theme['general-photo']}` + ')')
         
 mixin star(s, i)
-    a.col.s12.modal-trigger(href='#star-' + `${i}`)
-        .rectangle(style='background-image: url(' + `${s.photo}` + ')')
+    a.col.s6.modal-trigger(href='#star-' + `${i}`)
+        .rectangle(style='background-image: url(' + `${s.photo}` + '); margin-top: 1em;')
             .content
                 .name #{s.name}
                 
