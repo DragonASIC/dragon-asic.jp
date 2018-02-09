@@ -2,14 +2,11 @@ include ../mixins/about
 
 section#about.about.scrollspy
     .container
-        h2: span About us
+        h2: span Members
         h3 Meet the superheroes
         .row
-            // About general photo
-            +general-photo
-
             // About carousel
-            .owl-carousel.owl-theme.col.s12.l6
+            .owl-carousel.owl-theme.col.s12.l12
                 each star, i in site.data['stars']
                     +star(star, i)
                 .col.s12
